@@ -3,25 +3,17 @@
         <title>{{ title }} - My awesome app</title>
     </Head>
 
-    <div>
-        <div>
-            <button>
-                <Link :href="route('homepage')">Homepage</Link>
-            </button>
-            <button>
-                <Link :href="route('about')">About</Link>
-            </button>
-            <button>
-                <Link :href="route('contact')">Contact</Link>
-            </button>
-        </div>
-
+    <AppLayout>
         <h1>This is: {{ title }}</h1>
-    </div>
+    </AppLayout>
 </template>
 
 <script>
+import AppLayout from '../Layouts/AppLayout.vue';
+
 export default {
+    components: { AppLayout },
+
     props: {
         title: String,
     }
